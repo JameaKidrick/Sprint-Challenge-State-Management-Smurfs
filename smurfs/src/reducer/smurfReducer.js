@@ -20,17 +20,6 @@ export const reducer = (state = initialState, action) => {
         error: ''
       };
     case POST_SUCCESS:
-      const newSmurf = {
-        name: action.payload.name,
-        age: action.payload.age,
-        height: action.payload.height,
-        isFetching: false,
-        error: ''
-      }
-      return{
-        ...state,
-        smurfs: [...state.smurfs, newSmurf]
-      }
     case FETCH_SUCCESS:
       return{
         ...state,

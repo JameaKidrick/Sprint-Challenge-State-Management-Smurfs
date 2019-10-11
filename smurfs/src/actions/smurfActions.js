@@ -19,7 +19,9 @@ export const addSmurf = values => dispatch => {
   dispatch({ type: START_FETCHING });
   axios
     .post(`http://localhost:3333/smurfs`, values)
-    .then(response => dispatch({ type: POST_SUCCESS, payload: values }))
+    .then(response => {
+      console.log(response)
+      dispatch({ type: POST_SUCCESS, payload: response.data })})
     .catch(error => dispatch({ type: FETCH_FAILURE, payload: error.response }))
 }
 
