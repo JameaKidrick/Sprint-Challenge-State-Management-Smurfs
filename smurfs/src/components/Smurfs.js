@@ -23,7 +23,7 @@ const Smurfs = props => {
   if (props.Fetching){
     return <h2>GATHERING SMURFS...</h2>
   }
-  console.log(props.smurfs)
+
   return(
     <div>
       {props.error && <p>{props.error}</p>}
