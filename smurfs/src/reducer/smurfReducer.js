@@ -1,12 +1,12 @@
 import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE, POST_SUCCESS } from '../actions'
 
 export const initialState = {
-  smurfs: [{
+  smurfs: [
     // name: "Brainey", 
     // age: 200, 
     // height: "5cm", 
     // id: 0
-  }],
+  ],
   isFetching: false,
   error: ''
 }
@@ -36,7 +36,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         error: '',
-        joke: action.payload
+        smurfs: action.payload
       };
     case FETCH_FAILURE:
       return{
